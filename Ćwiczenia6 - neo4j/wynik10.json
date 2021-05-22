@@ -1,0 +1,131 @@
+﻿[
+  {
+    "port1": {
+"identity": 2,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "IAH"
+      }
+    },
+    "port2": {
+"identity": 1,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "EWR"
+      }
+    },
+    "price": 6906.0,
+    "cheap": [
+      {
+        "identity": 1697,
+        "start": 2,
+        "end": 23,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 3049.5,
+"flight_id": 463
+        }
+      },
+      {
+        "identity": 1531,
+        "start": 23,
+        "end": 1,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 3856.5,
+"flight_id": 303
+        }
+      }
+    ]
+  },
+  {
+    "port1": {
+"identity": 1,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "EWR"
+      }
+    },
+    "port2": {
+"identity": 2,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "IAH"
+      }
+    },
+    "price": 6901.5,
+    "cheap": [
+      {
+        "identity": 1696,
+        "start": 1,
+        "end": 23,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 3873.0,
+"flight_id": 307
+        }
+      },
+      {
+        "identity": 1544,
+        "start": 23,
+        "end": 2,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 3028.5,
+"flight_id": 459
+        }
+      }
+    ]
+  },
+  {
+    "port1": {
+"identity": 11,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "SFO"
+      }
+    },
+    "port2": {
+"identity": 23,
+"labels": [
+        "Airport"
+      ],
+"properties": {
+"name": "HNL"
+      }
+    },
+    "price": 5865.75,
+    "cheap": [
+      {
+        "identity": 1526,
+        "start": 11,
+        "end": 1,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 1992.75,
+"flight_id": 315
+        }
+      },
+      {
+        "identity": 1696,
+        "start": 1,
+        "end": 23,
+        "type": "CHEAPEST",
+        "properties": {
+"price": 3873.0,
+"flight_id": 307
+        }
+      }
+    ]
+  }
+]

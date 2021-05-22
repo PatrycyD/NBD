@@ -1,0 +1,108 @@
+Zapytanie 1
+
+MATCH 
+(tow:town {name: 'Darjeeling'}), (pk:peak {name: 'Sandakphu'})
+MATCH 
+p = allShortestPaths((tow)-[path*..5]->(pk))
+RETURN p
+
+Zapytnie 2
+
+MATCH 
+(tow:town {name: 'Darjeeling'}), (pk:peak {name: 'Sandakphu'})
+MATCH 
+p = allShortestPaths((tow)-[path*..5]->(pk))
+WHERE all(obj IN path WHERE obj.winter = 'true')
+RETURN p
+
+Zapytanie 3a
+
+MATCH 
+(tow:town {name: 'Darjeeling'}), (pk:peak {name: 'Sandakphu'})
+MATCH 
+p = (tow)-[path*]->(pk)
+RETURN p,  
+REDUCE(s = 0, r IN path | s + r.distance) AS total_distance 
+ORDER BY total_distance DESC
+
+Zadanie 3b
+
+MATCH
+(st {name: 'Darjeeling'})
+MATCH 
+p = (st) -[path:twowheeler*]-> ()
+WHERE all(r IN path WHERE r.summer = 'true')
+RETURN p
+
+CZĘŚĆ 2
+
+ZADANIE 4
+
+MATCH (port:Airport) <-[org:ORIGIN]- ()
+RETURN port, COUNT(org) AS origin_count
+ORDER BY origin_count DESC
+
+
+ZAPYTANIE pomocniczne - utworzenie bezpośredniej relacji między portami (ORIGIN -> DESTINATION) z najniższą możliwą ceną jako parametrem
+
+MATCH (port1:Airport) <-[:ORIGIN]- (flt) -[:DESTINATION]-> (port2:Airport)
+MATCH (flt) <-- (tck:Ticket) 
+WITH port1, port2, MIN(tck.price) AS lowest_price, id(flt) AS flight_id
+MERGE (port1)-[:CHEAPEST {price: lowest_price, flight_id: flight_id}] -> (port2)
+
+
+ZADANIE 5
+
+MATCH path = (la: Airport{name:'LAX'})-[:CHEAPEST*..4]->(port: Airport)
+WITH REDUCE(total = 0, f IN relationships(path) | total + f.price) AS total_price, path
+WHERE total_price < 3000
+RETURN DISTINCT(LAST(nodes(path)))
+
+
+W trzech kolejnych zapytaniach nie ma wyników - nie da się dolecieć z LA do Dayton
+
+ZAPYTANIE 6
+
+MATCH path = (la: Airport {name:"LAX"}) -[:CHEAPEST*..7]-> (port: Airport {name: "DAY"})
+WITH REDUCE(total = 0, f IN relationships(path) | total + f.price) AS total_price, path
+RETURN path
+ORDER BY total_price DESC
+
+ZAPYTANIE 7
+
+MATCH path = (la: Airport{ name:'LAX'}) -[:CHEAPEST*..7]-> (da: Airport {name: 'DAY'})
+WITH REDUCE(total = 0, f in relationships(path) | total + f.price) AS total_price, path
+RETURN path 
+ORDER BY total_price
+LIMIT 1
+
+ZAPYTANIE 8
+ZAPYTANIE pomocznicze - stowrzenie bezpośredniej relacji między lotniskami z ceną lotu biznesowego jako parametrem
+
+MATCH (la) <-[:ORIGIN]- (flt) -[:DESTINATION]-> (port:Airport)
+MATCH (flt) <-- (tck:Ticket {class:'business'}) 
+MERGE (la) -[:BUSINESS_FLIGHT {price: tck.price, flight_id: id(flt)}] -> (port)
+
+ZAPYTANIE WŁAŚCIWE
+
+MATCH path = (la: Airport {name:'LAX'})-[flt:BUSINESS_FLIGHT*..7]->(port: Airport{name: "DAY"})
+WITH REDUCE(total = 0, f IN relationships(path) | total + f.price) AS total_price, path
+RETURN path
+ORDER BY total_price 
+LIMIT 1
+
+ZAPYTANIE 9
+
+MATCH (orig:Airport)-[:ORIGIN]-(flt:Flight)-[:DESTINATION]-(dest:Airport)
+RETURN flt.airline, count(orig) AS count 
+ORDER BY count DESC
+
+ZAPYTANIE 10
+
+MATCH path = (port1: Airport) -[cheap:CHEAPEST*..4]-> (port2: Airport)
+WITH SIZE(REDUCE(dist = [], n in nodes(path) | CASE WHEN NOT n IN dist THEN dist + n END)) AS cnt, path, port1, port2, cheap
+WHERE cnt = 3
+WITH REDUCE(total = 0, f IN relationships(path) | total + f.price) AS total_price, path, port1, port2, cheap
+RETURN port1, port2, MIN(total_price) AS price, cheap //path, MIN(total_price) AS price
+ORDER BY MIN(total_price) DESC
+LIMIT 3

@@ -1,0 +1,26 @@
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("830b55fc-3701-40bc-b5f8-faba03824edc") }
+MongoDB server version: 4.4.5
+{ "currency" : "CNY", "total_balance" : 27776263.33 }
+{ "currency" : "EUR", "total_balance" : 16913519.13 }
+{ "currency" : "IDR", "total_balance" : 15803638.67 }
+{ "currency" : "RUB", "total_balance" : 8648162.27 }
+{ "currency" : "PHP", "total_balance" : 8354757.95 }
+{ "currency" : "BRL", "total_balance" : 5676516.76 }
+{ "currency" : "PLN", "total_balance" : 5127210.21 }
+{ "currency" : "USD", "total_balance" : 4154939.09 }
+{ "currency" : "SEK", "total_balance" : 3738579.57 }
+{ "currency" : "CZK", "total_balance" : 2668722.74 }
+{ "currency" : "JPY", "total_balance" : 2601019.27 }
+{ "currency" : "UAH", "total_balance" : 2531920.9 }
+{ "currency" : "PEN", "total_balance" : 2381759.99 }
+{ "currency" : "THB", "total_balance" : 2103307.17 }
+{ "currency" : "CAD", "total_balance" : 1998158.32 }
+{ "currency" : "COP", "total_balance" : 1980543.49 }
+{ "currency" : "ARS", "total_balance" : 1967570.17 }
+{ "currency" : "MXN", "total_balance" : 1568281.9 }
+{ "currency" : "VND", "total_balance" : 1418903.3699999999 }
+{ "currency" : "NGN", "total_balance" : 1301224.95 }
+Type "it" for more
+bye

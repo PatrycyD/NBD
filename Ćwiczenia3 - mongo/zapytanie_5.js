@@ -1,0 +1,1 @@
+db.people.aggregate([{$unwind: '$location'}, {$project: {_id: 0, first_name: 1, last_name: 1, 'location.city': 1, birth_date_converted: {$dateFromString: {dateString: '$birth_date'} } } }, {$match: {birth_date_converted: {$gte: ISODate('2001-01-01') } } }, {$project: {birth_date_converted: 0} } ]).pretty()

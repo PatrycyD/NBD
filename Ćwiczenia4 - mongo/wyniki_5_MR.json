@@ -1,0 +1,27 @@
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("b58727a5-0e5b-4eea-aab1-551806e3d0ef") }
+MongoDB server version: 4.4.5
+{ "result" : "MapReduce_5", "ok" : 1 }
+{ "currency" : "CNY", "total_balance" : 470700.38, "avg_balance" : 4954.74 }
+{ "currency" : "IDR", "total_balance" : 323922.59, "avg_balance" : 4907.92 }
+{ "currency" : "EUR", "total_balance" : 245091.47, "avg_balance" : 4901.83 }
+{ "currency" : "RUB", "total_balance" : 119749.15, "avg_balance" : 4989.55 }
+{ "currency" : "PHP", "total_balance" : 118606.28, "avg_balance" : 4941.93 }
+{ "currency" : "PLN", "total_balance" : 90770.78, "avg_balance" : 5042.82 }
+{ "currency" : "USD", "total_balance" : 80650.7, "avg_balance" : 5040.67 }
+{ "currency" : "SEK", "total_balance" : 70840.19, "avg_balance" : 5060.01 }
+{ "currency" : "JPY", "total_balance" : 60944.74, "avg_balance" : 5078.73 }
+{ "currency" : "CAD", "total_balance" : 58375.6, "avg_balance" : 5306.87 }
+{ "currency" : "MXN", "total_balance" : 50229, "avg_balance" : 5022.9 }
+{ "currency" : "BRL", "total_balance" : 49632.02, "avg_balance" : 4512 }
+{ "currency" : "UAH", "total_balance" : 40471.84, "avg_balance" : 5058.98 }
+{ "currency" : "CZK", "total_balance" : 37156.42, "avg_balance" : 4644.55 }
+{ "currency" : "VND", "total_balance" : 36160.26, "avg_balance" : 4520.03 }
+{ "currency" : "IRR", "total_balance" : 26504.24, "avg_balance" : 4417.37 }
+{ "currency" : "NGN", "total_balance" : 24946.23, "avg_balance" : 4157.7 }
+{ "currency" : "AMD", "total_balance" : 24609.33, "avg_balance" : 4921.87 }
+{ "currency" : "HRK", "total_balance" : 24354.82, "avg_balance" : 4870.96 }
+{ "currency" : "ARS", "total_balance" : 23242, "avg_balance" : 4648.4 }
+Type "it" for more
+bye

@@ -1,0 +1,26 @@
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("d3f6702e-d538-458d-bbe2-eeabfc40a7c2") }
+MongoDB server version: 4.4.5
+{ "job" : "Account Coordinator" }
+{ "job" : "Account Executive" }
+{ "job" : "Account Representative I" }
+{ "job" : "Account Representative II" }
+{ "job" : "Account Representative III" }
+{ "job" : "Account Representative IV" }
+{ "job" : "Accountant I" }
+{ "job" : "Accountant II" }
+{ "job" : "Accountant III" }
+{ "job" : "Accountant IV" }
+{ "job" : "Accounting Assistant I" }
+{ "job" : "Accounting Assistant II" }
+{ "job" : "Accounting Assistant III" }
+{ "job" : "Accounting Assistant IV" }
+{ "job" : "Actuary" }
+{ "job" : "Administrative Assistant I" }
+{ "job" : "Administrative Assistant II" }
+{ "job" : "Administrative Assistant III" }
+{ "job" : "Administrative Assistant IV" }
+{ "job" : "Administrative Officer" }
+Type "it" for more
+bye

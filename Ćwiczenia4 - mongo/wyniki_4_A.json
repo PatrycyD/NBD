@@ -1,0 +1,126 @@
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("afc5438c-b77a-42b6-89f1-827f7d3c0382") }
+MongoDB server version: 4.4.5
+{
+	"nationality" : "Afghanistan",
+	"BMI_max" : 31.68,
+	"BMI_min" : 17.1,
+	"BMI_avg" : 24.84
+}
+{
+	"nationality" : "Aland Islands",
+	"BMI_max" : 33.93,
+	"BMI_min" : 22.42,
+	"BMI_avg" : 28.16
+}
+{
+	"nationality" : "Albania",
+	"BMI_max" : 31.99,
+	"BMI_min" : 19,
+	"BMI_avg" : 24.71
+}
+{
+	"nationality" : "Algeria",
+	"BMI_max" : 28.59,
+	"BMI_min" : 28.59,
+	"BMI_avg" : 28.59
+}
+{
+	"nationality" : "American Samoa",
+	"BMI_max" : 22.4,
+	"BMI_min" : 22.4,
+	"BMI_avg" : 22.4
+}
+{
+	"nationality" : "Andorra",
+	"BMI_max" : 30.65,
+	"BMI_min" : 25.69,
+	"BMI_avg" : 28.17
+}
+{
+	"nationality" : "Angola",
+	"BMI_max" : 31.67,
+	"BMI_min" : 18.36,
+	"BMI_avg" : 24.18
+}
+{
+	"nationality" : "Argentina",
+	"BMI_max" : 34.13,
+	"BMI_min" : 17.59,
+	"BMI_avg" : 25.63
+}
+{
+	"nationality" : "Armenia",
+	"BMI_max" : 31.67,
+	"BMI_min" : 19.17,
+	"BMI_avg" : 24.94
+}
+{
+	"nationality" : "Australia",
+	"BMI_max" : 29.82,
+	"BMI_min" : 20.65,
+	"BMI_avg" : 25.2
+}
+{
+	"nationality" : "Austria",
+	"BMI_max" : 37.26,
+	"BMI_min" : 23.02,
+	"BMI_avg" : 27.94
+}
+{
+	"nationality" : "Azerbaijan",
+	"BMI_max" : 36.93,
+	"BMI_min" : 18.77,
+	"BMI_avg" : 25.95
+}
+{
+	"nationality" : "Bahamas",
+	"BMI_max" : 26.6,
+	"BMI_min" : 22.24,
+	"BMI_avg" : 24.99
+}
+{
+	"nationality" : "Bangladesh",
+	"BMI_max" : 34.06,
+	"BMI_min" : 19.81,
+	"BMI_avg" : 26.69
+}
+{
+	"nationality" : "Barbados",
+	"BMI_max" : 21.34,
+	"BMI_min" : 21.34,
+	"BMI_avg" : 21.34
+}
+{
+	"nationality" : "Belarus",
+	"BMI_max" : 33.94,
+	"BMI_min" : 17.86,
+	"BMI_avg" : 25.47
+}
+{
+	"nationality" : "Belgium",
+	"BMI_max" : 29,
+	"BMI_min" : 20.05,
+	"BMI_avg" : 26.14
+}
+{
+	"nationality" : "Belize",
+	"BMI_max" : 26.22,
+	"BMI_min" : 18.42,
+	"BMI_avg" : 23.22
+}
+{
+	"nationality" : "Benin",
+	"BMI_max" : 30.3,
+	"BMI_min" : 21.33,
+	"BMI_avg" : 25.78
+}
+{
+	"nationality" : "Bhutan",
+	"BMI_max" : 31.36,
+	"BMI_min" : 19.42,
+	"BMI_avg" : 24.06
+}
+Type "it" for more
+bye

@@ -1,0 +1,62 @@
+Zapytanie 1
+
+MATCH(n) RETURN n
+
+Zapytnie 2
+
+MATCH 
+(:Person {name: 'Hugo Weaving'})-[:ACTED_IN]->(m:Movie)
+RETURN m
+
+Zapytnie 3
+
+MATCH 
+(:Person {name: 'Hugo Weaving'}) -[:ACTED_IN]-> (:Movie) <-[:DIRECTED]- (dir:Person)
+RETURN dir
+
+Zapytnie 4
+
+MATCH
+(:Person {name: 'Hugo Weaving'}) -[:ACTED_IN]-> (:Movie) <-[:ACTED_IN]- (act:Person)
+RETURN act
+
+Zapytnie 5
+
+MATCH
+(:Movie {title: 'The Matrix'}) <-[:ACTED_IN]- (per:Person) -[:ACTED_IN]-> (mov:Movie)
+RETURN mov
+
+Zapytnie 6
+
+MATCH
+(act:Person) -[:ACTED_IN]-> (m:Movie)
+RETURN act, COUNT(m) AS played_movies_count
+
+Zapytnie 7
+
+MATCH
+(per:Person) -[wr:WROTE]-> (mov:Movie),
+(per) -[di:DIRECTED]-> (mov)
+RETURN per, mov
+
+Zapytnie 8
+
+MATCH
+(:Person {name: 'Keanu Reeves'}) -[:ACTED_IN]-> (mov:Movie),
+(:Person {name: 'Hugo Weaving'}) -[:ACTED_IN]-> (mov)
+RETURN mov
+
+Zapytanie 9
+
+Part 1:
+MERGE (:Person {name: 'Joe Johnston'}) -[:DIRECTED]-> (mov:Movie {title: 'Captain America: The First Avenger', released: 2011, tagline: 'Captain America origin story'})
+MERGE (:Person {name: 'Christopher Markus'}) -[:WROTE]-> (mov)
+MERGE (:Person {name: 'Stephen McFeely'}) -[:WROTE]-> (mov)
+MERGE (:Person {name: 'Chris Evans'}) -[:ACTED_IN]-> (mov)
+MERGE (:Person {name: 'Hugo Weaving'}) -[:ACTED_IN]-> (mov)
+MERGE (:Person {name: 'Samuel L. Jackson'}) -[:ACTED_IN]-> (mov)
+
+Part 2:
+MATCH 
+(per:Person) -[]-> (mov:Movie {title: 'Captain America: The First Avenger'})
+RETURN per, mov
