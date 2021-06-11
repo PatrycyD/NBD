@@ -1,0 +1,1 @@
+Niestety nie udalo mi sie wyciagnac tych outputow z zapytan wysylanych przez pythona
