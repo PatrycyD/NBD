@@ -1,0 +1,83 @@
+ZAPYTANIA Z ZADANIA 1
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Jan", "surname":"Kowalski", "job_title": "programmer", "salary": 15000}' \
+http://localhost:8098/buckets/s22190/keys/worker1
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Janina", "surname":"Nowak", "job_title": "accountant", "salary": 10000}' \
+http://localhost:8098/buckets/s22190/keys/worker2
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Mieszko", "surname":"Pierwszy", "job_title": "politician", "salary": 5000}' \
+http://localhost:8098/buckets/s22190/keys/worker3
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Jadwiga", "surname":"Andegaweńska", "job_title": "king", "salary": 20000}' \
+http://localhost:8098/buckets/s22190/keys/worker4
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Krzysztof", "surname":"Krzysztofowicz", "job_title": "sportsman", "salary": 25000}' \
+http://localhost:8098/buckets/s22190/keys/worker5
+
+
+ZAPYTANIE 2
+
+curl -i http://localhost:8098/buckets/s22190/keys/worker1
+
+
+ZAPYTANIE 3
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Jan", "surname":"Kowalski", "job_title": "programmer", "salary": 15000, "years_to_retirement": 20}' \
+http://localhost:8098/buckets/s22190/keys/worker1
+
+
+ZAPYTANIE 4
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Janina", "surname":"Nowak", "job_title": "accountant"}' \
+http://localhost:8098/buckets/s22190/keys/worker2
+
+
+ZAPYTANIE 5
+
+curl -XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Mieszko", "surname":"Pierwszy", "job_title": "politician", "salary": 5555}' \
+http://localhost:8098/buckets/s22190/keys/worker3
+
+
+ZAPYTANIE 6
+
+curl -XDELETE -i http://localhost:8098/buckets/s22190/keys/worker4
+
+
+ZAPYTNIE 7
+
+curl -i http://localhost:8098/buckets/s22190/keys/worker4
+
+
+ZAPYTANIE 8
+
+curl –XPUT -i \
+-H "Content-Type: application/json" \
+-d '{"name": "Anna"}' \
+http://localhost:8098/buckets/s22190/keys/
+
+
+ZAPYTANIE 9
+
+curl -i http://localhost:8098/buckets/s22190/keys/O5t0Zd5JAkbr2LN7G0KfTIcSZFh
+
+
+ZAPYTANIE 10
+
+curl -XDELETE -i http://localhost:8098/buckets/s22190/keys/O5t0Zd5JAkbr2LN7G0KfTIcSZFh
